@@ -1,0 +1,527 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Bhushan Chaudhari — Software Engineer</title>
+  <meta name="description" content="Portfolio of Bhushan Chaudhari — Backend Software Engineer specializing in Django, FastAPI, AWS, and scalable microservices." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- Grain overlay -->
+  <div class="grain" aria-hidden="true"></div>
+
+  <!-- Dissolve / disintegration filter for the portrait -->
+  <svg class="svg-defs" width="0" height="0" aria-hidden="true" focusable="false">
+    <defs>
+      <filter id="dissolve" x="-15%" y="-15%" width="130%" height="130%" color-interpolation-filters="sRGB">
+        <feTurbulence type="fractalNoise" baseFrequency="0.010 0.013" numOctaves="2" seed="4" result="smoke">
+          <animate attributeName="baseFrequency" dur="20s" values="0.010 0.013; 0.014 0.010; 0.010 0.013" repeatCount="indefinite" />
+        </feTurbulence>
+        <feDisplacementMap in="SourceGraphic" in2="smoke" scale="3" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </defs>
+  </svg>
+
+  <!-- Nav -->
+  <header class="nav" data-testid="main-nav">
+    <a href="#top" class="brand" data-testid="brand-link">
+      <span class="brand-mark">CODE</span>
+      <span class="brand-name">WITH&nbsp;<span class="brand-mark">BHUSHAN</span></span>
+      
+    </a>
+    <nav class="nav-links" data-testid="nav-links">
+      <a href="#about" data-testid="nav-about">About</a>
+      <a href="#experience" data-testid="nav-experience">Experience</a>
+      <a href="#projects" data-testid="nav-projects">Projects</a>
+      <a href="#skills" data-testid="nav-skills">Skills</a>
+      <a href="#coding" data-testid="nav-coding">Coding</a>
+      <a href="#education" data-testid="nav-education">Education</a>
+      <a href="#contact" data-testid="nav-contact">Contact</a>
+    </nav>
+    <a href="#contact" class="nav-cta" data-testid="nav-cta">
+      <span>Get in Touch</span>
+      <i class="fa-solid fa-arrow-right"></i>
+    </a>
+    <button class="nav-toggle" aria-label="Toggle menu" data-testid="nav-toggle">
+      <span></span><span></span>
+    </button>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="hero" data-testid="hero-section">
+    <div class="hero-bg-orbs" aria-hidden="true">
+      <div class="orb orb-1"></div>
+      <div class="orb orb-2"></div>
+    </div>
+    <div class="hero-inner hero-two-col">
+     <div class="hero-copy">
+      <div class="hero-eyebrow reveal">
+        <span class="dot"></span>
+        <span>Bhushan Chaudhari · Pune, India</span>
+      </div>
+      <h1 class="hero-title reveal" data-testid="hero-title">
+        <span class="line">Crafting <em>scalable</em></span>
+        <span class="line">backends with</span>
+        <span class="line gold">precision &amp; taste.</span>
+      </h1>
+      <p class="hero-sub reveal" data-testid="hero-subtitle">
+        I'm <strong>Bhushan Chaudhari</strong> — a Software Engineer building multi-tenant EHR, RCM &amp; CRM platforms using Django, FastAPI, Redis and AWS serverless. Two years shipping distributed systems that don't wobble under load.
+      </p>
+      <div class="hero-cta reveal">
+        <a href="#projects" class="btn btn-gold" data-testid="hero-projects-btn">
+          <span>View Projects</span>
+          <i class="fa-solid fa-arrow-down-long"></i>
+        </a>
+        <a href="mailto:bhushanch45@gmail.com" class="btn btn-ghost" data-testid="hero-email-btn">
+          <i class="fa-regular fa-envelope"></i>
+          <span>bhushanch45@gmail.com</span>
+        </a>
+      </div>
+      <div class="hero-meta reveal">
+        <div class="meta-item">
+          <span class="meta-num">2<span>y</span></span>
+          <span class="meta-label">Engineering<br/>Experience</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-num">50<span>+</span></span>
+          <span class="meta-label">Secured API<br/>Endpoints</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-num">40<span>%</span></span>
+          <span class="meta-label">Latency<br/>Reduced</span>
+        </div>
+        <div class="meta-divider"></div>
+        <div class="meta-item">
+          <span class="meta-num">4<span></span></span>
+          <span class="meta-label">Production<br/>Projects</span>
+        </div>
+      </div>
+     </div>
+     <div class="hero-portrait reveal" data-testid="hero-portrait">
+       <div class="portrait-frame">
+         <img src="portrait.png" alt="Bhushan Chaudhari portrait" loading="eager" />
+         <div class="portrait-glow" aria-hidden="true"></div>
+       </div>
+       <div class="portrait-badge">
+         <span class="badge-dot"></span>
+         <span>Software Engineer · E2</span>
+       </div>
+     </div>
+    </div>
+    <a href="#about" class="scroll-hint" data-testid="scroll-hint" aria-label="Scroll down">
+      <span>Scroll</span>
+      <span class="scroll-line"></span>
+    </a>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="section about" data-testid="about-section">
+    <div class="section-head reveal">
+      <span class="section-num">01</span>
+      <h2 class="section-title">About</h2>
+      <span class="section-rule"></span>
+    </div>
+    <div class="about-grid">
+      <div class="about-copy reveal">
+        <p class="lead">
+          Software Engineer with ~2 years shipping <span class="hl">backend architecture</span>, RESTful APIs, microservices and asynchronous systems using <span class="hl">Django, DRF, FastAPI, Redis</span> and AWS serverless.
+        </p>
+        <p>
+          I've built and scaled multi-tenant EHR, RCM and CRM platforms with strict data isolation, HIPAA-compliant security, real-time communication and distributed system design — deployed on <span class="hl">AWS (EC2, S3, RDS, SNS, SQS, Lambda, EventBridge)</span>.
+        </p>
+        <p>
+          Comfortable owning event-driven workflows, payment integrations (CardConnect: CNP, CIT, MIT, surcharging) and Twilio IVR automation, while collaborating directly with clients on backend outcomes.
+        </p>
+        <ul class="about-list">
+          <li><i class="fa-solid fa-location-dot"></i><span>Pune, India</span></li>
+          <li><i class="fa-solid fa-briefcase"></i><span>Software Engineer E2 · Thinkitive</span></li>
+          <li><i class="fa-solid fa-award"></i><span>Key Contributor of the Year 2025</span></li>
+        </ul>
+      </div>
+      <aside class="about-card reveal" data-testid="about-card">
+        <div class="card-corner tl"></div>
+        <div class="card-corner tr"></div>
+        <div class="card-corner bl"></div>
+        <div class="card-corner br"></div>
+        <div class="card-inner">
+          <div class="card-row">
+            <span class="card-key">Name</span>
+            <span class="card-val">Bhushan Chaudhari</span>
+          </div>
+          <div class="card-row">
+            <span class="card-key">Role</span>
+            <span class="card-val">Software Engineer E2</span>
+          </div>
+          <div class="card-row">
+            <span class="card-key">Focus</span>
+            <span class="card-val">Backend · Distributed Systems</span>
+          </div>
+          <div class="card-row">
+            <span class="card-key">Stack</span>
+            <span class="card-val">Django · FastAPI · AWS · Redis</span>
+          </div>
+          <div class="card-row">
+            <span class="card-key">Email</span>
+            <a class="card-val link" href="mailto:bhushanch45@gmail.com">bhushanch45@gmail.com</a>
+          </div>
+          <div class="card-row">
+            <span class="card-key">Phone</span>
+            <a class="card-val link" href="tel:+917420905636">+91 74209 05636</a>
+          </div>
+          <div class="card-social">
+            <a href="mailto:bhushanch45@gmail.com" data-testid="social-email" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+            <a href="https://www.linkedin.com/in/bhushan-bhushnbc/" target="_blank" rel="noopener" data-testid="social-linkedin" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://github.com/bhush-n" target="_blank" rel="noopener" data-testid="social-github" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+            <a href="https://leetcode.com/u/bhush-n/" target="_blank" rel="noopener" data-testid="social-leetcode" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+            <a href="https://www.geeksforgeeks.org/profile/bhushanch45" target="_blank" rel="noopener" data-testid="social-gfg" aria-label="GeeksforGeeks"><i class="fa-solid fa-laptop-code"></i></a>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- Experience -->
+  <section id="experience" class="section experience" data-testid="experience-section">
+    <div class="section-head reveal">
+      <span class="section-num">02</span>
+      <h2 class="section-title">Experience</h2>
+      <span class="section-rule"></span>
+    </div>
+    <div class="timeline">
+      <article class="timeline-item reveal" data-testid="exp-item-1">
+        <div class="timeline-marker"><span></span></div>
+        <div class="timeline-body">
+          <div class="timeline-head">
+            <div>
+              <h3 class="job-role">Software Engineer E2</h3>
+              <p class="job-company">Thinkitive Technologies · Pune, India</p>
+            </div>
+            <span class="job-date">Sep 2024 — Present</span>
+          </div>
+          <ul class="job-bullets">
+            <li>Developed &amp; maintained EHR REST APIs for B2B healthcare platforms using Django &amp; DRF, supporting thousands of daily requests.</li>
+            <li>Improved API response time by <strong>40%</strong> through Redis-based caching and query optimization.</li>
+            <li>Designed &amp; deployed Dockerized microservices using cookiecutter-django, cutting environment setup time by <strong>60%</strong>.</li>
+            <li>Built event-driven backend workflows using AWS Lambda &amp; EventBridge for automation and background orchestration.</li>
+            <li>Implemented RBAC and JWT-based auth securing <strong>50+ API endpoints</strong> across multi-tenant systems.</li>
+            <li>Integrated CardConnect payment workflows (CNP, CIT, MIT, surcharging) processing production-grade transactions.</li>
+            <li>Integrated ClaimMD clearinghouse APIs for electronic claim submission, eligibility, and ERA processing.</li>
+          </ul>
+          <div class="chip-row">
+            <span class="chip">Django</span>
+            <span class="chip">DRF</span>
+            <span class="chip">FastAPI</span>
+            <span class="chip">Redis</span>
+            <span class="chip">AWS</span>
+            <span class="chip">Docker</span>
+            <span class="chip">Celery</span>
+            <span class="chip">Twilio</span>
+            <span class="chip">CardConnect</span>
+            <span class="chip">Deepgram</span>
+            <span class="chip">Healthcare</span>
+          </div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects" class="section projects" data-testid="projects-section">
+    <div class="section-head reveal">
+      <span class="section-num">03</span>
+      <h2 class="section-title">Selected Projects</h2>
+      <span class="section-rule"></span>
+    </div>
+    <div class="projects-grid">
+      <article class="project-card reveal" data-testid="project-card-1">
+        <div class="project-index">P/01</div>
+        <h3 class="project-title">Psynapsys — EHR System</h3>
+        <p class="project-desc">Multi-tenant Electronic Health Record platform with therapist workflows, scheduling automation, RBAC-secured endpoints, Redis caching, Celery-driven reminders, Twilio IVR (JSON state machines) and CardConnect payments — reduced onboarding time by <strong>60%</strong>.</p>
+        <ul class="project-tags">
+          <li>cookiecutter-django</li><li>RBAC</li><li>Redis</li><li>Celery</li><li>Twilio IVR</li><li>CardConnect</li><li>AWS EC2/S3/RDS</li>
+        </ul>
+        <div class="project-foot"><span>Healthcare · Multi-tenant</span></div>
+      </article>
+
+      <article class="project-card reveal" data-testid="project-card-2">
+        <div class="project-index">P/02</div>
+        <h3 class="project-title">ResolveMD — RCM Platform</h3>
+        <p class="project-desc">Scalable backend for DME billing &amp; revenue cycle. FastAPI services publishing async events over AWS EventBridge, Lambda-driven workflows, SQS/SNS/Redis queues, and HIPAA-oriented multi-tenant architecture with RBAC and audit logging.</p>
+        <ul class="project-tags">
+          <li>FastAPI</li><li>AWS EventBridge</li><li>AWS Lambda</li><li>SQS</li><li>SNS</li><li>Redis</li><li>HIPAA</li>
+        </ul>
+        <div class="project-foot"><span>Healthcare Billing · Event-driven</span></div>
+      </article>
+
+      <article class="project-card reveal" data-testid="project-card-3">
+        <div class="project-index">P/03</div>
+        <h3 class="project-title">Wonder Years — CRM Platform</h3>
+        <p class="project-desc">Secure, scalable backend APIs with CardConnect payment integration for psychiatric services. Executed CardConnect certification tests (CNP, CIT/MIT, surcharge) and improved cross-team collaboration via Swagger/OpenAPI docs.</p>
+        <ul class="project-tags">
+          <li>Django</li><li>CardConnect</li><li>Swagger/OpenAPI</li><li>PostgreSQL</li>
+        </ul>
+        <div class="project-foot"><span>Healthcare CRM · Payments</span></div>
+      </article>
+
+      <article class="project-card reveal" data-testid="project-card-4">
+        <div class="project-index">P/04</div>
+        <h3 class="project-title">AI Code Reviewer</h3>
+        <p class="project-desc">AI-driven platform to analyze backend &amp; frontend code for bugs, performance, security and best practices. Streamlit UI, LangChain LCEL orchestration, Groq LLM (LLaMA 3.1) for fast, reliable reviews.</p>
+        <ul class="project-tags">
+          <li>LangChain LCEL</li><li>Groq · LLaMA 3.1</li><li>Streamlit</li><li>Python</li>
+        </ul>
+        <div class="project-foot"><span>AI Tooling · Developer Experience</span><span class="live-tag">Live App</span></div>
+      </article>
+    </div>
+  </section>
+
+  <!-- Skills -->
+  <section id="skills" class="section skills" data-testid="skills-section">
+    <div class="section-head reveal">
+      <span class="section-num">04</span>
+      <h2 class="section-title">Skills &amp; Toolbox</h2>
+      <span class="section-rule"></span>
+    </div>
+    <div class="skills-grid">
+      <div class="skill-col reveal">
+        <h4 class="skill-cat"><i class="fa-solid fa-code"></i> Languages</h4>
+        <div class="skill-tags">
+          <span>Python</span><span>JavaScript</span><span>HTML</span><span>CSS</span>
+        </div>
+      </div>
+      <div class="skill-col reveal">
+        <h4 class="skill-cat"><i class="fa-solid fa-layer-group"></i> Frameworks</h4>
+        <div class="skill-tags">
+          <span>Django</span><span>Django REST Framework</span><span>FastAPI</span><span>React</span><span>LangChain</span>
+        </div>
+      </div>
+      <div class="skill-col reveal">
+        <h4 class="skill-cat"><i class="fa-solid fa-database"></i> Data &amp; Cache</h4>
+        <div class="skill-tags">
+          <span>PostgreSQL</span><span>MySQL</span><span>AWS RDS</span><span>Redis</span><span>Django Cache</span>
+        </div>
+      </div>
+      <div class="skill-col reveal">
+        <h4 class="skill-cat"><i class="fa-brands fa-aws"></i> Cloud &amp; DevOps</h4>
+        <div class="skill-tags">
+          <span>AWS EC2</span><span>S3</span><span>RDS</span><span>SNS</span><span>SQS</span><span>Lambda</span><span>EventBridge</span><span>Docker</span><span>GitHub Actions</span><span>CI/CD</span>
+        </div>
+      </div>
+      <div class="skill-col reveal">
+        <h4 class="skill-cat"><i class="fa-solid fa-diagram-project"></i> Architecture</h4>
+        <div class="skill-tags">
+          <span>Microservices</span><span>Multi-tenant</span><span>REST APIs</span><span>RBAC</span><span>Async Processing</span><span>Data Modeling</span>
+        </div>
+      </div>
+      <div class="skill-col reveal">
+        <h4 class="skill-cat"><i class="fa-solid fa-toolbox"></i> Tools</h4>
+        <div class="skill-tags">
+          <span>Git</span><span>Postman</span><span>Swagger/OpenAPI</span><span>Celery</span><span>Twilio</span><span>CardConnect</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Coding & Streaks -->
+  <section id="coding" class="section coding" data-testid="coding-section">
+    <div class="section-head reveal">
+      <span class="section-num">05</span>
+      <h2 class="section-title">Coding &amp; Streaks</h2>
+      <span class="section-rule"></span>
+    </div>
+
+    <p class="coding-lead reveal">Consistency over intensity — Recently started daily problem-solving across LeetCode &amp; GeeksforGeeks, with contributions shipping on GitHub.</p>
+
+    <div class="coding-profiles reveal">
+      <a class="cprofile" href="https://leetcode.com/u/bhush-n/" target="_blank" rel="noopener" data-testid="profile-leetcode">
+        <i class="fa-solid fa-code"></i>
+        <span class="cp-text"><span class="cp-name">LeetCode</span><span class="cp-handle">@bhush-n</span></span>
+        <i class="fa-solid fa-arrow-up-right-from-square cp-out"></i>
+      </a>
+      <a class="cprofile" href="https://www.geeksforgeeks.org/profile/bhushanch45" target="_blank" rel="noopener" data-testid="profile-gfg">
+        <i class="fa-solid fa-laptop-code"></i>
+        <span class="cp-text"><span class="cp-name">GeeksforGeeks</span><span class="cp-handle">@bhushanch45</span></span>
+        <i class="fa-solid fa-arrow-up-right-from-square cp-out"></i>
+      </a>
+      <a class="cprofile" href="https://github.com/bhush-n" target="_blank" rel="noopener" data-testid="profile-github">
+        <i class="fa-brands fa-github"></i>
+        <span class="cp-text"><span class="cp-name">GitHub</span><span class="cp-handle">@bhush-n</span></span>
+        <i class="fa-solid fa-arrow-up-right-from-square cp-out"></i>
+      </a>
+      <a class="cprofile" href="https://www.linkedin.com/in/bhushan-bhushnbc/" target="_blank" rel="noopener" data-testid="profile-linkedin">
+        <i class="fa-brands fa-linkedin-in"></i>
+        <span class="cp-text"><span class="cp-name">LinkedIn</span><span class="cp-handle">@bhushan-bhushnbc</span></span>
+        <i class="fa-solid fa-arrow-up-right-from-square cp-out"></i>
+      </a>
+    </div>
+
+    <div class="stat-cards">
+      <a class="stat-card reveal" href="https://leetcode.com/u/bhush-n/" target="_blank" rel="noopener" data-testid="stat-leetcode">
+        <img loading="lazy" alt="LeetCode solved count and submission streak for bhush-n"
+             src="https://leetcard.jacoblin.cool/bhush-n?theme=dark&font=Manrope&ext=heatmap&border=0&radius=14" />
+      </a>
+      <a class="stat-card reveal" href="https://github.com/bhush-n" target="_blank" rel="noopener" data-testid="stat-github">
+        <img loading="lazy" alt="GitHub contribution streak for bhush-n"
+             src="https://streak-stats.demolab.com/?user=bhush-n&hide_border=true&background=0a0705&stroke=3b2e1a&ring=d4af37&fire=f6d97a&currStreakLabel=d4af37&currStreakNum=f5ecd8&sideLabels=b6a888&sideNums=f5ecd8&dates=7a6e56&excludeDaysLabel=7a6e56" />
+      </a>
+      <a class="stat-card reveal" href="https://www.geeksforgeeks.org/profile/bhushanch45" target="_blank" rel="noopener" data-testid="stat-gfg">
+        <img loading="lazy" alt="GeeksforGeeks coding stats for bhushanch45"
+             src="https://gfgstatscard.vercel.app/bhushanch45?theme=dark" />
+      </a>
+    </div>
+  </section>
+
+  <!-- Education -->
+  <section id="education" class="section education" data-testid="education-section">
+    <div class="section-head reveal">
+      <span class="section-num">06</span>
+      <h2 class="section-title">Education &amp; Certifications</h2>
+      <span class="section-rule"></span>
+    </div>
+    <div class="edu-wrap">
+      <div class="edu-col reveal">
+        <h4 class="edu-heading">Academics</h4>
+        <div class="edu-item">
+          <div class="edu-year">2023 — 2024</div>
+          <div class="edu-body">
+            <h5>Linux Admin with AWS Solution Architect</h5>
+            <p>SevenMentors Institute · Pune</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-year">2021 — 2023</div>
+          <div class="edu-body">
+            <h5>Master of Computer Applications (MCA)</h5>
+            <p>Savitribai Phule Pune University · Pune</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-year">2018 — 2021</div>
+          <div class="edu-body">
+            <h5>Bachelor of Computer Applications (BCA)</h5>
+            <p>KBC North Maharashtra University · Jalgaon</p>
+          </div>
+        </div>
+      </div>
+      <div class="edu-col reveal">
+        <h4 class="edu-heading">Certifications &amp; Awards</h4>
+        <div class="edu-item">
+          <div class="edu-year"><i class="fa-solid fa-trophy"></i></div>
+          <div class="edu-body">
+            <h5>Key Contributor of the Year 2025</h5>
+            <p>Thinkitive Technologies</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-year"><i class="fa-brands fa-aws"></i></div>
+          <div class="edu-body">
+            <h5>AWS Academy Graduate</h5>
+            <p>AWS Academy</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-year"><i class="fa-brands fa-linkedin"></i></div>
+          <div class="edu-body">
+            <h5>Django Essential Training</h5>
+            <p>LinkedIn Learning</p>
+          </div>
+        </div>
+        <div class="edu-item">
+          <div class="edu-year"><i class="fa-solid fa-code"></i></div>
+          <div class="edu-body">
+            <h5>Introduction to Java &amp; Data Structures</h5>
+            <p>Coding Ninjas</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="section contact" data-testid="contact-section">
+    <div class="section-head reveal">
+      <span class="section-num">07</span>
+      <h2 class="section-title">Get in Touch</h2>
+      <span class="section-rule"></span>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-copy reveal">
+        <h3 class="contact-tagline">Have a backend that needs to <em>scale</em>? Let's talk.</h3>
+        <p>Whether it's a distributed system, a payment integration, or an event-driven refactor — I'd love to hear the details.</p>
+        <div class="contact-lines">
+          <a href="mailto:bhushanch45@gmail.com" class="contact-line" data-testid="contact-email-link">
+            <i class="fa-regular fa-envelope"></i>
+            <div>
+              <span class="cl-key">Email</span>
+              <span class="cl-val">bhushanch45@gmail.com</span>
+            </div>
+          </a>
+          <a href="tel:+917420905636" class="contact-line" data-testid="contact-phone-link">
+            <i class="fa-solid fa-phone"></i>
+            <div>
+              <span class="cl-key">Phone</span>
+              <span class="cl-val">+91 74209 05636</span>
+            </div>
+          </a>
+          <div class="contact-line">
+            <i class="fa-solid fa-location-dot"></i>
+            <div>
+              <span class="cl-key">Location</span>
+              <span class="cl-val">Pune, India</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="contact-form reveal" id="contactForm" data-testid="contact-form" novalidate>
+        <div class="form-row">
+          <label>
+            <span>Your Name</span>
+            <input type="text" name="name" required data-testid="contact-name" autocomplete="name" />
+          </label>
+          <label>
+            <span>Your Email</span>
+            <input type="email" name="email" required data-testid="contact-email" autocomplete="email" />
+          </label>
+        </div>
+        <label class="full">
+          <span>Subject</span>
+          <input type="text" name="subject" data-testid="contact-subject" />
+        </label>
+        <label class="full">
+          <span>Message</span>
+          <textarea name="message" rows="5" required data-testid="contact-message"></textarea>
+        </label>
+        <button type="submit" class="btn btn-gold btn-block" data-testid="contact-submit">
+          <span>Send Message</span>
+          <i class="fa-solid fa-paper-plane"></i>
+        </button>
+        <p class="form-note" id="formNote" data-testid="form-note"></p>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer" data-testid="footer">
+    <div class="footer-left">
+      <span class="footer-mark">CODE WITH BHUSHAN</span>
+      <span>© <span id="year"></span> Bhushan Chaudhari. Crafted with intent.</span>
+    </div>
+    <div class="footer-right">
+      <a href="mailto:bhushanch45@gmail.com" aria-label="Email"><i class="fa-regular fa-envelope"></i></a>
+      <a href="https://www.linkedin.com/in/bhushan-bhushnbc/" target="_blank" rel="noopener" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+      <a href="https://github.com/bhush-n" target="_blank" rel="noopener" aria-label="GitHub"><i class="fa-brands fa-github"></i></a>
+      <a href="https://leetcode.com/u/bhush-n/" target="_blank" rel="noopener" aria-label="LeetCode"><i class="fa-solid fa-code"></i></a>
+      <a href="https://www.geeksforgeeks.org/profile/bhushanch45" target="_blank" rel="noopener" aria-label="GeeksforGeeks"><i class="fa-solid fa-laptop-code"></i></a>
+      <a href="#top" aria-label="Back to top" class="back-top"><i class="fa-solid fa-arrow-up"></i></a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+<script>(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.innerHTML="window.__CF$cv$params={r:'a154eeb7db890eea',t:'MTc4MzA3MTY2NQ=='};var a=document.createElement('script');a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script></body>
+</html>
